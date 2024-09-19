@@ -23,7 +23,15 @@ By developing such a system, we hope to enable more engaging and versatile voice
 
 ## III. Dataset Description
 
-We will use the Emotional Speech Dataset (ESD) for this project, specifically focusing on 10 English speakers. The dataset will be split into training, validation, and test sets as follows:
+We use the Emotional Speech Dataset (ESD) for this project, specifically focusing on 10 English speakers. 
+The ESD is a high-quality emotional speech dataset designed for emotional voice conversion and emotional text-to-speech tasks. 
+
+For detailed information about the ESD and to access the raw dataset, please visit:
+https://hltsingapore.github.io/ESD/
+
+Note: While the link above provides access to the raw ESD, for this project we will be using a preprocessed and binarized version of the dataset.
+
+Our preprocessed dataset consists of 1750 utterances per speaker, divided equally among 5 emotions (neutral, happy, angry, sad, surprise), with 350 utterances per emotion. The dataset has been split into training, validation, and test sets as follows:
 
 ### Training Set
 - All 10 speakers from ESD
