@@ -15,10 +15,9 @@ We aim to improve upon existing TTS systems by enabling more natural and varied 
 
 Current TTS systems often struggle to produce truly expressive and natural-sounding speech, especially when trying to transfer speaking styles within a speaker's voice. This project is motivated by the need for TTS models that can:
 
-1. Generate speech with natural prosody and expressiveness
-2. Accurately capture and reproduce various speaking styles of a single speaker
-3. Transfer speaking styles (e.g., emotional states, prosody) within the same speaker's voice
-4. Improve the overall quality and naturalness of synthesized speech
+1. Accurately capture and reproduce various speaking styles and emotions of speaker
+2. Transfer speaking styles (e.g., emotional states, prosody) within the same speaker's voice
+3. Generate speech with improved naturalness and expressiveness
 
 By developing such a system, we hope to enable more engaging and versatile voice applications, improve the naturalness of synthesized speech, and advance the state-of-the-art in expressive speech synthesis.
 
@@ -27,21 +26,33 @@ By developing such a system, we hope to enable more engaging and versatile voice
 We will use the Emotional Speech Dataset (ESD) for this project, specifically focusing on 10 English speakers. The dataset will be split into training, validation, and test sets as follows:
 
 ### Training Set
-- 10 speakers from ESD
-- 5 emotions per speaker (angry, happy, neutral, sad, surprise)
-- 80% of available utterances for each speaker-emotion combination
+- All 10 speakers from ESD
+- For each speaker:
+  - 310 utterances per emotion
+  - Total of 1550 utterances per speaker (310 x 5 emotions)
+- Overall total: 15,500 utterances (1550 x 10 speakers)
 
-### Validation Set  
+### Validation Set
 - Same 10 speakers as in the training set
-- 5 emotions per speaker (angry, happy, neutral, sad, surprise)
-- 10% of available utterances for each speaker-emotion combination
+- For each speaker:
+  - 20 utterances per emotion
+  - Total of 100 utterances per speaker (20 x 5 emotions)
+- Overall total: 1,000 utterances (100 x 10 speakers)
 
 ### Test Set
 - Same 10 speakers as in the training and validation sets
-- 5 emotions per speaker (angry, happy, neutral, sad, surprise)
-- Remaining 10% of available utterances for each speaker-emotion combination
+- For each speaker:
+  - 30 utterances per emotion
+  - Total of 150 utterances per speaker (30 x 5 emotions)
+- Overall total: 1,500 utterances (150 x 10 speakers)
 - Only input text and reference style audio provided for testing
 
-All datasets can be accessed at: [Link to data repository]
+The specific utterance ranges for each set are:
+
+- Training: 51-360, 401-710, 751-1060, 1101-1410, 1451-1760
+- Validation: 1-20, 351-370, 701-720, 1051-1070, 1401-1420
+- Test: 21-50, 371-400, 721-750, 1071-1100, 1421-1450
+
+All datasets are available from (https://drive.google.com/drive/folders/19qV2xjEh32XOU8HHj10b17NE1b4GvlF0?usp=sharing)
 
 We encourage participants to focus on developing models that can effectively capture and transfer expressive styles within a speaker's voice, demonstrating high-quality and natural-sounding results across different emotions.
