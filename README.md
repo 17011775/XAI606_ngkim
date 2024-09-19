@@ -45,7 +45,6 @@ We will use the Emotional Speech Dataset (ESD) for this project, specifically fo
   - 30 utterances per emotion
   - Total of 150 utterances per speaker (30 x 5 emotions)
 - Overall total: 1,500 utterances (150 x 10 speakers)
-- Only input text and reference style audio provided for testing
 
 The specific utterance ranges for each set are:
 
@@ -53,6 +52,20 @@ The specific utterance ranges for each set are:
 - Validation: 1-20, 351-370, 701-720, 1051-1070, 1401-1420
 - Test: 21-50, 371-400, 721-750, 1071-1100, 1421-1450
 
-All datasets are available from (https://drive.google.com/drive/folders/19qV2xjEh32XOU8HHj10b17NE1b4GvlF0?usp=sharing)
+### Preprocessed Data Format
+
+The dataset has been preprocessed and binarized. The structure of the preprocessed data is as follows:
+
+- `train.data`, `valid.data`, `test.data`: Binarized data files for each set
+- `train.idx`, `valid.idx`, `test.idx`: Index files for the binarized data
+- `train_lengths.npy`, `valid_lengths.npy`, `test_lengths.npy`: NumPy files containing mel-spectrogram lengths
+- `train_f0s_mean_std.npy`, `valid_f0s_mean_std.npy`, `test_f0s_mean_std.npy`: NumPy files with F0 statistics
+- `emo_map.json`: JSON file mapping emotion labels to numerical IDs
+- `phone_set.json`: JSON file containing the set of phonemes used
+- `spk_map.json`: JSON file mapping speaker IDs to numerical IDs
+
+These preprocessed files contain all necessary information for model training, including mel-spectrograms, phoneme sequences, F0 contours, and emotion embeddings.
+
+All preprocessed datasets are available from (https://drive.google.com/drive/folders/19qV2xjEh32XOU8HHj10b17NE1b4GvlF0?usp=sharing)
 
 We encourage participants to focus on developing models that can effectively capture and transfer expressive styles within a speaker's voice, demonstrating high-quality and natural-sounding results across different emotions.
