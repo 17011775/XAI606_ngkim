@@ -36,9 +36,9 @@ Our preprocessed dataset consists of 1750 utterances per speaker, divided equall
 ### Training Set
 - All 10 speakers from ESD
 - For each speaker:
-  - 310 utterances per emotion
-  - Total of 1550 utterances per speaker (310 x 5 emotions)
-- Overall total: 15,500 utterances (1550 x 10 speakers)
+  - 300 utterances per emotion
+  - Total of 1500 utterances per speaker (300 x 5 emotions)
+- Overall total: 15,000 utterances (1500 x 10 speakers)
 
 ### Validation Set
 - Same 10 speakers as in the training set
