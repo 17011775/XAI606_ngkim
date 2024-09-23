@@ -56,7 +56,7 @@ Our preprocessed dataset consists of 1750 utterances per speaker, divided equall
 
 The specific utterance ranges for each set are:
 
-- Training: 51-360, 401-710, 751-1060, 1101-1410, 1451-1750
+- Training: 51-350, 401-700, 751-1050, 1101-1400, 1451-1750
 - Validation: 1-20, 351-370, 701-720, 1051-1070, 1401-1420
 - Test: 21-50, 371-400, 721-750, 1071-1100, 1421-1450
 
