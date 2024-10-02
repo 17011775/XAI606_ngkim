@@ -89,6 +89,7 @@ conda activate ExpTTS
 ```
 
 ### Training 
+- Change binarized_data_dir in config file
 
 ```bash
 CUDA_VISIBLE_DEVICES=$GPU python tasks/run.py --config modules/GenerSpeech/config/generspeech.yaml  --exp_name GenerSpeech --reset
@@ -99,3 +100,5 @@ CUDA_VISIBLE_DEVICES=$GPU python tasks/run.py --config modules/GenerSpeech/confi
 ```bash
 CUDA_VISIBLE_DEVICES=$GPU python tasks/run.py --config modules/GenerSpeech/config/generspeech.yaml  --exp_name GenerSpeech --infer
 ```
+### Contact 
+- antonio7219.0629@gmail.com 
