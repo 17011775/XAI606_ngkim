@@ -1,0 +1,77 @@
+raw_data_dir: '/workspace/ng/data/raw/esd'
+processed_data_dir: '/workspace/ng/data/processed/esd'
+binary_data_dir: '/workspace/ng/data/binary/esd'
+pre_align_cls: egs.datasets.audio.emotion.pre_align.EmoPreAlign
+preprocess_cls: egs.datasets.audio.emotion.pre_align.EmoPreAlign
+binarization_args:
+  shuffle: true
+binarizer_cls: data_gen.tts.base_binarizer_emotion.EmotionBinarizer
+audio_sample_rate: 16000
+hop_size: 256  # For 22050Hz, 275 ~= 12.5 ms (0.0125 * sample_rate)
+win_size: 1024  # For 22050Hz, 1100 ~= 50 ms (If None, win_size: fft_size) (0.05 * sample_rate)
+fmin: 80  # Set this to 55 if your speaker is male! if female, 95 should help taking off noise. (To test depending on dataset. Pitch info: male~[65, 260], female~[100, 525])
+fmax: 7600  # To be increased/reduced depending on data.
+fft_size: 1024  # Extra window size is filled with 0 paddings to match this parameter
+min_level_db: -100
+ref_level_db: 20
+audio_num_mel_bins: 80
+# emotion encoder
+emotion_encoder_path: /workspace/ng/data/checkpoints/Emotion_encoder.pt 
+# vocoder
+vocoder: pwg
+vocoder_ckpt: /workspace/ng/data/checkpoints/model_ckpt_steps_1000000.ckpt
+use_spk_id: true
+test_num: 200
+num_spk: 10
+pitch_type: frame
+min_frames: 128
+num_test_samples: 1
+mel_loss: "ssim:0.5|l1:0.5"
+use_emotion: true
+word_dict_size: 10000
+use_spk_embed: true
+use_word: true
+use_emotion: true
+use_gt_dur: false
+ref_audio: ''
+text: ''
+preprocess_args:
+  nsample_per_mfa_group: 1000
+  # text process
+  txt_processor: en
+  use_mfa: true
+  with_phsep: true
+  reset_phone_dict: true
+  reset_word_dict: true
+  add_eos_bos: true
+  # mfa
+  mfa_group_shuffle: false
+  mfa_offset: 0.02
+  # wav processors
+  wav_processors: []
+  save_sil_mask: true
+  vad_max_silence_length: 12
+pre_align_args:
+  allow_no_txt: false
+  denoise: false
+  sox_resample: false
+  sox_to_wav: false
+  trim_sil: false
+  txt_processor: en
+  use_tone: true
+binarization_args:
+  reset_phone_dict: true
+  reset_word_dict: true
+  shuffle: true
+  trim_eos_bos: false
+  trim_sil: false
+  with_align: true
+  with_f0: true
+  with_f0cwt: false
+  with_linear: false
+  with_spk_embed: true
+  with_spk_id: true
+  with_txt: true
+  with_wav: true
+  with_word: true
+
