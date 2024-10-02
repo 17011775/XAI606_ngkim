@@ -80,12 +80,12 @@ We encourage participants to focus on developing models that can effectively cap
 
 ### Dependencies
 
-A suitable [conda](https://conda.io/) environment named `ExpTTS` can be created
+A suitable [conda](https://conda.io/) environment named `generspeech` can be created
 and activated with:
 
 ```
 conda env create -f environment.yaml
-conda activate ExpTTS
+conda activate generspeech
 ```
 
 ### Training 
