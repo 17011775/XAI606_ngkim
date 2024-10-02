@@ -77,3 +77,17 @@ These preprocessed files contain all necessary information for model training, i
 All preprocessed datasets are available from (https://drive.google.com/drive/folders/19qV2xjEh32XOU8HHj10b17NE1b4GvlF0?usp=sharing)
 
 We encourage participants to focus on developing models that can effectively capture and transfer expressive styles within a speaker's voice, demonstrating high-quality and natural-sounding results across different emotions.
+
+
+
+### Training 
+
+```bash
+CUDA_VISIBLE_DEVICES=$GPU python tasks/run.py --config modules/GenerSpeech/config/generspeech.yaml  --exp_name GenerSpeech --reset
+```
+
+### Inference 
+
+```bash
+CUDA_VISIBLE_DEVICES=$GPU python tasks/run.py --config modules/GenerSpeech/config/generspeech.yaml  --exp_name GenerSpeech --infer
+```
