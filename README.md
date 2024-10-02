@@ -78,7 +78,15 @@ All preprocessed datasets are available from (https://drive.google.com/drive/fol
 
 We encourage participants to focus on developing models that can effectively capture and transfer expressive styles within a speaker's voice, demonstrating high-quality and natural-sounding results across different emotions.
 
+### Dependencies
 
+A suitable [conda](https://conda.io/) environment named `ExpTTS` can be created
+and activated with:
+
+```
+conda env create -f environment.yaml
+conda activate ExpTTS
+```
 
 ### Training 
 
